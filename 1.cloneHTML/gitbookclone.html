@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>프로필 관리 페이지 | 회원가입 및 정보관리</title>
+    </head>
+<body>
+    <header id="main-header" class="header">
+        <nav aria-label="메인 네비게이션">
+            <h1>메뉴</h1>
+            <ul>
+                <li><a href="#signup">회원가입</a></li>
+                <li><a href="#profile">프로필 정보</a></li>
+                <li><a href="#contact">문의하기</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    
+    <main id="main-content">
+        <section class="form-container signup">
+            <h2>회원가입</h2>
+            <form id="signup-form" aria-label="회원가입 폼">
+                <label for="signup-username">사용자 이름 : </label>
+                <input type="text" id="signup-username" name="signup-username" required>
+                <br>    
+                <label for="signup-email">이메일 : </label>
+                <input type="email" id="signup-email" name="signup-email" required>
+                <br>
+                <label for="signup-password">비밀번호 : </label>
+                <input type="password" id="signup-password" name="signup-password" required>
+                <br>
+                <label for="signup-age">나이 : </label>
+                <input type="number" id="signup-age" name="signup-age" required>
+                <br>
+                <label for="signup-gender">성별 : </label>
+                <input type="radio" id="signup-gender" name="signup-gender" value="male" required>
+                <label for="signup-gender">남자</label>
+                <input type="radio" id="signup-gender" name="signup-gender" value="female" required>
+                <label for="signup-gender">여자</label>
+                <br>
+                <label for="signup-self-introduction">자기소개 : </label>
+                <textarea id="signup-self-introduction" name="signup-self-introduction" rows="4" required></textarea>
+                <br>
+                <label for="signup-hobby">취미 : </label>
+                <select id="signup-hobbys" name="signup-hobbys[]" required>
+                    <optgroup label="스포츠">
+                        <option value="축구">축구</option>
+                        <option value="농구">농구</option>
+                        <option value="테니스">테니스</option>
+                    </optgroup>
+                    <optgroup label="예술">
+                        <option value="음악">음악</option>
+                        <option value="미술">미술</option>
+                        <option value="사진">사진</option>
+                    </optgroup>
+                    <optgroup label="기타">
+                        <option value="독서">독서</option>
+                        <option value="여행">여행</option>
+                        <option value="요리">요리</option>
+                    </optgroup>
+                </select>
+                <br>
+                <label for="signup-profile-picture">프로필사진업로드 :</label>
+                <input type="file" id="signup-profile-picture" name="signup-profile-picture" accept="image/*" required>
+                <br>
+                <button type="submit">회원가입</button>
+                <button type="reset">초기화</button>
+                <progress id="upload-progress" value="70" max="100">업데이트 진행상황 : </progress>
+                
+            </form>
+            <hr/>
+        </section>
+        
+        <section class="form-container profile">
+            <h2>프로필 정보</h2>
+            <table border="1" width="100%">
+                <caption>프로필 정보 요약</caption>
+
+                <colgroup>
+                    <col style="width: 20%;">
+                    <col style="width: 80%;">
+                </colgroup>
+
+                <thead>
+                    <tr>
+                        <th>항목</th>
+                        <th>내용</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>프로필 사진</td>
+                        <td><img   id="update-profile-picture" src="example.jpg" alt="프로필 사진"></td>
+                    </tr>
+                    <tr>
+                        <td>이름</td>
+                        <td id="update-username"></td>
+                    </tr>
+                    <tr>
+                        <td>이메일</td>
+                        <td id="update-email"></td>
+                    </tr>
+                    <tr>
+                        <td>나이</td>
+                        <td id="update-age"></td>
+                    </tr>
+                    <tr>
+                        <td>성별</td>
+                        <td id="update-gender"></td>
+                    </tr>
+                    <tr>
+                        <td>자기소개</td>
+                        <td id="update-self-introduction"></td>
+                    </tr>
+                    <tr>
+                        <td>취미</td>
+                        <td id="update-hobby"></td>
+                    </tr>
+                        
+                </tbody>
+            </table>
+            <p hidden id="success-message"> 프로필 정보가 성공적으로 업데이트 되었습니다.</p>
+        </section>
+    </main>
+
+    <footer id="main-footer" class="footer">
+        <section class="footer-section contact">
+            <h2>문의하기</h2>
+            <label for="contact-email">문의 : <a href="mailto:contact@example.com">contact@example.com</a></label>
+            <label for="contact-phone">전화번호 : 010-1234-5678</label>
+            <label for="contact-address">주소 : 서울시 강서구 마곡동</label>
+        </section>
+
+        <section class="footer-section address">
+            <h2>오시는길</h2>
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.983504055135!2d127.02850031586653!3d37.49790677980783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca15f8d15b8df%3A0x6c15b2e0e4c0a5d3!2z7J2067O47Jq164uI66Gc66eI7IucIOq1rOq1rOygnOqwgCDsmqnsnpHtirjtj4ggMzQ!5e0!3m2!1sko!2skr!4v1615391857987!5m2!1sko!2skr" 
+            allowfullscreen="" 
+            loading="lazy"
+            width="100%">
+        </iframe>
+        </section>
+        <div class="footer-section copyright">
+            <p>Copyright 2025 프로필 관리 페이지</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
