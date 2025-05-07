@@ -19,7 +19,6 @@
                         <div id="topPayArea" class="pay_area">
                             <button id="topPayButton" type="button" class="btn_pay"></button>
                         </div>  
-                        
                     </div>
                     <div class="right_buttons">
                         <div id="topTalkArea" class="talk_area">
@@ -32,66 +31,72 @@
                             <button id="topShoppingButton" type="button" class="btn_shopping"></button>
                         </div>
                     </div>
-                    
                 </section>
                 <section class="searcharea">
+                    <div class="search_group">
+                        <h1 id="special-input-logo" class="search_logo"><a href="/2.naverclone/naverclone.html" class="link_naver type_motion_hat is_fadeout"><img src="https://s.pstatic.net/static/www/mobile/edit/20230516_0/upload_1684217675277OZzsu.gif" width="58" height="58" alt="NAVER"></a><a href="/" class="link_naver type_motion_n is_fadein"><span class="ico_n_logo_svg"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"></path></svg></span><span class="blind">NAVER</span></a></h1>
+                        <form id="sform" name="search" role="search" action="https://search.naver.com/search.naver" method="get"> <fieldset> <legend class="blind">검색</legend> <input type="hidden" name="where" value="nexearch"> <input type="hidden" id="sm" name="sm" value="top_hty"> <input type="hidden" id="fbm" name="fbm" value="0"> <input type="hidden" id="acr" name="acr" value="" disabled="disabled"> <input type="hidden" id="acq" name="acq" value="" disabled="disabled"> <input type="hidden" id="qdt" name="qdt" value="" disabled="disabled"> <input type="hidden" id="ie" name="ie" value="utf8"> <input type="hidden" id="acir" name="acir" value="" disabled="disabled"> <input type="hidden" id="os" name="os" value="" disabled="disabled"> <input type="hidden" id="bid" name="bid" value="" disabled="disabled"> <input type="hidden" id="pkid" name="pkid" value="" disabled="disabled"> <input type="hidden" id="eid" name="eid" value="" disabled="disabled"> <input type="hidden" id="mra" name="mra" value="" disabled="disabled"> <div class="search_input_box"> <input id="query" name="query" type="search" title="검색어를 입력해 주세요." placeholder="검색어를 입력해 주세요." maxlength="255" autocomplete="off" class="search_input" data-atcmp-element=""> </div> <button type="submit" class="btn_search" onclick="window.ntm.push({event:&quot;nclick&quot;,el:this,click_area:&quot;sch.action&quot;})"> <span class="ico_btn_search_svg"> <svg id="search-btn" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" style="fill: #03c75a"> <path d="M22.13.5c11.378 0 20.632 9.256 20.632 20.63 0 4.699-1.566 9.155-4.439 12.782l10.164 10.165a2.41 2.41 0 0 1-1.706 4.115 2.412 2.412 0 0 1-1.706-.705L33.31 35.719a2.41 2.41 0 0 1 0-3.41 15.71 15.71 0 0 0 4.628-11.178c0-8.718-7.09-15.808-15.807-15.808-8.718 0-15.808 7.09-15.808 15.808 0 7.15 4.817 13.43 11.714 15.273a2.41 2.41 0 0 1 1.705 2.954 2.41 2.41 0 0 1-2.95 1.705C7.788 38.658 1.5 30.46 1.5 21.131 1.5 9.756 10.756.5 22.13.5zm4.716 34.746a3.483 3.483 0 1 1 0 6.966 3.483 3.483 0 0 1 0-6.966z"></path> </svg> </span> <span class="blind">검색</span> </button> </fieldset> <input type="hidden" name="ackey" value="lq7s390u"></form>
+                        <div class="search_box"> <button id="ke_kbd_btn" type="button" class="btn_keyboard" aria-pressed="false"> <span class="keybord_text"> <span class="blind">입력도구</span> </span> </button> <div id="_nx_kbd" style="display:none"></div> <button id="nautocomplete" type="button" class="btn_arrow" data-atcmp-element=""> <span class="blind">자동완성/최근검색어펼치기</span> </button> </div>
+                    </div>
                 </section>
                 <nav class="shortcutarea">
                     <ul class="shortcut-list">
                         <li class="shortcut-item">
                             <a href="https://mail.naver.com" class="link_service" target="_blank">
-                                <span class="service_icon type_mail"><img src="https://s.pstatic.net/static/www/mobile/edit/20240112_1095/upload_1705057885416AaxUM.png" width="40" height="40" class="service_img" alt="메일"></span>
+                                <span class="service_icon type_mail"></span>
                                 <span class="service_name">메일</span></a>
                         </li>
                         <li class="shortcut-item">
                             <a href="https://cafe.naver.com" class="link_service" target="_blank">
-                                <span class="service_icon type_cafe"><img src="https://s.pstatic.net/static/www/mobile/edit/20240112_1095/upload_1705057885416AaxUM.png" width="40" height="40" class="service_img" alt="카페"></span>
+                                <span class="service_icon type_cafe"></span>
                                 <span class="service_name">카페</span></a>
                         </li>
                         <li class="shortcut-item">
                             <a href="https://blog.naver.com" class="link_service" target="_blank">
-                                <span class="service_icon type_blog"><img src="https://s.pstatic.net/static/www/mobile/edit/20240112_1095/upload_1705057885416AaxUM.png" width="40" height="40" class="service_img" alt="블로그"></span>
+                                <span class="service_icon type_blog"></span>
                                 <span class="service_name">블로그</span></a>
                         </li>
                         <li class="shortcut-item">
                             <a href="https://shopping.naver.com/ns/home" class="link_service" target="_blank">
-                                <span class="service_icon type_shopping"><img src="https://s.pstatic.net/static/www/mobile/edit/20240112_1095/upload_1705057885416AaxUM.png" width="40" height="40" class="service_img" alt="스토어"></span>
+                                <span class="service_icon type_shopping"></span>
                                 <span class="service_name">스토어</span></a>
                         </li>
                         <li class="shortcut-item">
                             <a href="https://news.naver.com/" class="link_service" target="_blank">
-                                <span class="service_icon type_news"><img src="https://s.pstatic.net/static/www/mobile/edit/20240112_1095/upload_1705057885416AaxUM.png" width="40" height="40" class="service_img" alt="뉴스"></span>
+                                <span class="service_icon type_news"></span>
                                 <span class="service_name">뉴스</span></a>
                         </li>
                         <li class="shortcut-item">
                             <a href="https://finance.naver.com/" class="link_service" target="_blank">
-                                <span class="service_icon type_stock"><img src="https://s.pstatic.net/static/www/mobile/edit/20240112_1095/upload_1705057885416AaxUM.png" width="40" height="40" class="service_img" alt="증권"></span>
+                                <span class="service_icon type_stock"></span>
                                 <span class="service_name">증권</span></a>
                         </li>
                         <li class="shortcut-item">
                             <a href="https://land.naver.com/" class="link_service" target="_blank">
-                                <span class="service_icon type_real"><img src="https://s.pstatic.net/static/www/mobile/edit/20240112_1095/upload_1705057885416AaxUM.png" width="40" height="40" class="service_img" alt="부동산"></span>
+                                <span class="service_icon type_real"></span>
                                 <span class="service_name">부동산</span></a>
                         </li>
                         <li class="shortcut-item">
                             <a href="https://map.naver.com" class="link_service" target="_blank">
-                                <span class="service_icon type_map"><img src="https://s.pstatic.net/static/www/mobile/edit/20240112_1095/upload_1705057885416AaxUM.png" width="40" height="40" class="service_img" alt="지도"></span>
+                                <span class="service_icon type_map"></span>
                                 <span class="service_name">지도</span></a>
                         </li>
                         <li class="shortcut-item">
                             <a href="https://comic.naver.com" class="link_service" target="_blank">
-                                <span class="service_icon type_webtoon"><img src="https://s.pstatic.net/static/www/mobile/edit/20240112_1095/upload_1705057885416AaxUM.png" width="40" height="40" class="service_img" alt="치지직"></span>
+                                <span class="service_icon type_webtoon"></span>
                                 <span class="service_name">웹툰</span></a>
                         </li>
                         <li class="shortcut-item">
                             <a href="https://chzzk.naver.com/" class="link_service" target="_blank">
                                 <span class="service_icon"><img src="https://s.pstatic.net/static/www/mobile/edit/20240112_1095/upload_1705057885416AaxUM.png" width="40" height="40" class="service_img" alt="치지직"></span>
-                                <span class="service_name">치지직</span></a>
+                                <span class="service_name">치지직</span>
+                            </a>
                         </li>
                         <li class="shortcut-item">
                             <a href="#" class="link_service" role="button">
-                                <span class="service_icon type_more"><img src="https://s.pstatic.net/static/www/mobile/edit/20240112_1095/upload_1705057885416AaxUM.png" width="40" height="40" class="service_img" alt="치지직"></span>
-                                <span class="blind">바로가기 펼침</span></a>
+                                <span class="service_icon type_more"></span>
+                                <span class="blind">바로가기 펼침</span>
+                            </a>
                         </li>
                     </ul>
                 </nav>

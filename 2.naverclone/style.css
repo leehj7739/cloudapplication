@@ -103,18 +103,106 @@
 
 
 /* searcharea */
+/* 검색 영역 전체 컨테이너 */
 .searcharea {
   width: 100%;
-  height: 100px;
-  background: #03c75a;    
+  height: 60px;
+  background: #03c75a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  position: relative; /* 추가 */
+}
+
+/* 검색 그룹 */
+.search_group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  height: 100%;
+  position: relative; /* 추가 */
+}
+
+/* 로고 영역 */
+.search_logo {
+  height: 100%;
+  margin-right: 0px;
+  flex-shrink: 0; /* 추가 */
+}
+
+/* 검색 폼 */
+#sform {
+  width: 75%;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  position: relative; /* 추가 */
+}
+
+#sform > fieldset {
+  width: 100%;
+  height: 58px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* 검색 입력창 컨테이너 */
+.search_input_box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border: 0;
+  padding: 0;
+}
+
+/* 검색 입력창 */
+.search_input {
+  width: 100%;
+  height: 100%;
+  border: 0px solid #03c75a;
+  padding: 0;
+  background: #fff;
+  font-size: 16px;
+  outline: none;
+}
+
+/* 검색 버튼 */
+.btn_search {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* 검색 박스 (키보드, 자동완성 버튼) */
+.search_box {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 10px;
 }
 
 /* shortcutarea */
 .shortcutarea {
   background: #e41e1e;              
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .shortcut-list {
+  width: 50%;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -126,9 +214,13 @@
 .shortcut-item {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   width: 64px;
+  border: 0;
 }
+
+
 
 .link_service {
   display: flex;
@@ -140,7 +232,7 @@
 
 .service_icon {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 40px;
   height: 40px;
@@ -149,19 +241,126 @@
   border-radius: 16px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
   margin-bottom: 6px;
-  transition: border 0.2s, box-shadow 0.2s;
+  position: relative;
 }
 
-.link_service:hover .service_icon,
-.link_service:focus .service_icon {
-  border: 1.5px solid #03c75a;
-  box-shadow: 0 2px 8px rgba(3,199,90,0.08);
+.service_icon.type_mail::after {
+  content: "";
+  display: block;
+  background-image: url(https://pm.pstatic.net/resources/asset/sp_main.04eb92b7.png);
+  background-size: 463px 442px;
+  background-position: -205px -219px;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
 }
 
-.service_img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
+.service_icon.type_cafe::after {
+  content: "";
+  display: block;
+  background-image: url(https://pm.pstatic.net/resources/asset/sp_main.04eb92b7.png);
+  background-size: 463px 442px;
+  background-position: -41px -219px;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.service_icon.type_blog::after {
+  content: "";
+  display: block;
+  background-image: url(https://pm.pstatic.net/resources/asset/sp_main.04eb92b7.png);
+  background-size: 463px 442px;
+  background-position: 0px -219px;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.service_icon.type_shopping::after {
+  content: "";
+  display: block;
+  background-image: url(https://pm.pstatic.net/resources/asset/sp_main.04eb92b7.png);
+  background-size: 463px 442px;
+  background-position: -41px -260px;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.service_icon.type_news::after {
+  content: "";
+  display: block;
+  background-image: url(https://pm.pstatic.net/resources/asset/sp_main.04eb92b7.png);
+  background-size: 463px 442px; 
+  background-position: -270px -205px;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.service_icon.type_stock::after {
+  content: "";
+  display: block;
+  background-image: url(https://pm.pstatic.net/resources/asset/sp_main.04eb92b7.png);
+  background-size: 463px 442px;
+  background-position: -123px -260px;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.service_icon.type_real::after {
+  content: "";
+  display: block;
+  background-image: url(https://pm.pstatic.net/resources/asset/sp_main.04eb92b7.png);
+  background-size: 463px 442px;
+  background-position: 0px -260px;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.service_icon.type_map::after {
+  content: "";
+  display: block;
+  background-image: url(https://pm.pstatic.net/resources/asset/sp_main.04eb92b7.png);
+  background-size: 463px 442px;
+  background-position: -270px 0px;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.service_icon.type_webtoon::after {
+  content: "";
+  display: block;
+  background-image: url(https://pm.pstatic.net/resources/asset/sp_main.04eb92b7.png);
+  background-size: 463px 442px;
+  background-position: -164px -260px;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.service_icon.type_more::after {
+  content: "";
+  display: block;
+  background-image: url(https://pm.pstatic.net/resources/asset/sp_main.04eb92b7.png);
+  background-size: 463px 442px;
+  background-position: -270px -164px;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px; 
+}
+
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
 }
 
 .service_name {
@@ -173,15 +372,9 @@
   white-space: nowrap;
 }
 
-.blind {
-  position: absolute;
-  width: 1px; height: 1px;
-  margin: -1px; padding: 0;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
-}
 
+
+/* container */
 
 .container-wrapper {
   width: 1280px;
@@ -190,7 +383,7 @@
   margin: 0 auto;
 }
 
-/* container */
+
 .container {
   display: flex;
   flex-direction: row;
