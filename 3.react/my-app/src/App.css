@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+.login-module{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.login-module_link{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 20px);
+  padding: 15px 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid rgba(0, 0, 0, .06);
+  border-radius: 4px;
+  background-color: #03c75a;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(3, 199, 90, .12);
+  box-shadow: 0 2px 4px 0 rgba(3, 199, 90, .12);
+  text-decoration: none;
+  color: #fff;
+}
+  
+
+.login-module_logo {
+  background-image: url(https://pm.pstatic.net/resources/asset/sp_main.04eb92b7.png);
+  background-size: 463px 442px;
+  background-position: 0px -301px;
+  background-repeat: no-repeat;
+  width: 72px;
+  height: 14px;
+  display: inline-block;
+  margin: 3px 8px 0 0;
+  vertical-align: top;
+}
+
+.login-module_more{
+padding: 10px;
+}
+
+.login-module_more > a{
+height: 20px;
+color: #000;
+text-decoration: none;
+}
+
+.login-module_more > a:hover {
+color: #000;
+text-decoration: underline;
+}
