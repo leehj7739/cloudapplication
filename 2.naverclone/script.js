@@ -8,6 +8,60 @@ document.getElementById('topShoppingButton').addEventListener('click', function(
     window.location.href = 'https://shopping.naver.com/cart';
 });
 
+// 탑 버튼 호버시 툴팁
+
+const menuButton = document.getElementById('topAsideButton');
+const menuTooltip = document.getElementById('menuTooltip');
+
+const payButton = document.getElementById('topPayButton');
+const payTooltip = document.getElementById('payTooltip');
+
+const talkButton = document.getElementById('topTalkButton');
+const talkTooltip = document.getElementById('talkTooltip');
+
+const notiButton = document.getElementById('topNotiButton');
+const notiTooltip = document.getElementById('notiTooltip');
+
+const shoppingButton = document.getElementById('topShoppingButton');
+const shoppingTooltip = document.getElementById('shoppingTooltip');
+
+menuButton.addEventListener('mouseenter', function() {
+    menuTooltip.style.display = 'block';
+});
+  menuButton.addEventListener('mouseleave', function() {
+    menuTooltip.style.display = 'none';
+ });
+
+payButton.addEventListener('mouseenter', function() {
+  payTooltip.style.display = 'block';
+});
+payButton.addEventListener('mouseleave', function() {
+  payTooltip.style.display = 'none';
+});
+
+
+
+talkButton.addEventListener('mouseenter', function() {
+  talkTooltip.style.display = 'block';
+});
+talkButton.addEventListener('mouseleave', function() {
+  talkTooltip.style.display = 'none';
+});         
+
+notiButton.addEventListener('mouseenter', function() {
+  notiTooltip.style.display = 'block';
+});
+notiButton.addEventListener('mouseleave', function() {
+  notiTooltip.style.display = 'none';
+});
+
+shoppingButton.addEventListener('mouseenter', function() {
+  shoppingTooltip.style.display = 'block';
+});
+shoppingButton.addEventListener('mouseleave', function() {
+  shoppingTooltip.style.display = 'none';
+});
+
 // 네이버 검색
 document.addEventListener('DOMContentLoaded', function() {
     const searchForm = document.querySelector('.search_form');

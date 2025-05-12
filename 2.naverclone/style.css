@@ -101,6 +101,28 @@
   position: relative;
 }
 
+/* 버튼 툴팁 */
+.button-tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  top: 100%;      /* 버튼 바로 아래 */
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 8px 14px;
+  z-index: 100;
+  font-size: 14px;
+  white-space: nowrap;
+}
 
 /* searcharea */
 .searcharea {
