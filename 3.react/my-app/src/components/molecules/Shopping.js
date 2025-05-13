@@ -67,7 +67,6 @@ function Shopping() {
                         'shoppinglive': <ShoppingLiveContent />
                     }[activeTab]}
                 </div>
-                <div className="todayPick"></div>
                 <div className="bottom_pagination"></div>
             </div>
         </React.Fragment>
