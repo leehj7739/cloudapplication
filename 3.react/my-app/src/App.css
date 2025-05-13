@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -41,7 +42,7 @@
 
 
 
-.login-module{
+.login-module {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,7 +51,7 @@
   height: 100%;
 }
 
-.login-module_link{
+.login-module_link {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -67,7 +68,7 @@
   text-decoration: none;
   color: #fff;
 }
-  
+
 
 .login-module_logo {
   background-image: url(https://pm.pstatic.net/resources/asset/sp_main.04eb92b7.png);
@@ -81,17 +82,17 @@
   vertical-align: top;
 }
 
-.login-module_more{
-padding: 10px;
+.login-module_more {
+  padding: 10px;
 }
 
-.login-module_more > a{
-height: 20px;
-color: #000;
-text-decoration: none;
+.login-module_more>a {
+  height: 20px;
+  color: #000;
+  text-decoration: none;
 }
 
-.login-module_more > a:hover {
-color: #000;
-text-decoration: underline;
+.login-module_more>a:hover {
+  color: #000;
+  text-decoration: underline;
 }

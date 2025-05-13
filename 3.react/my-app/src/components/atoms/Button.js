@@ -2,11 +2,11 @@ function Button(props) {
 
     console.log(props);
 
-    return(
+    return (
         <button>
-           {props.btnName}
+            {props.btnName}
         </button>
     )
-   }
+}
 
 export default Button;
