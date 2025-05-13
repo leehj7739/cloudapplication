@@ -1,5 +1,6 @@
 import React from 'react';
 import NewsStand from './newsStand';
+import Shopping from './Shopping';
 
 function Leftcontainer() {
     return (
@@ -10,7 +11,9 @@ function Leftcontainer() {
                         <NewsStand />
                     </div>
                 </div>
-                <div className="left-container-content">왼쪽2</div>
+                <div className="left-container-content">
+                    <Shopping />
+                </div>
                 <div className="left-container-content">왼쪽3</div>
                 <div className="left-container-content">왼쪽4</div>
                 <div className="left-container-content">왼쪽5</div>

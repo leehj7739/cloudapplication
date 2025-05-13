@@ -2,7 +2,7 @@
 .topwrapper {
   width: 1280px;
   height: 100%;
-  background: #000;
+  background: #ffffff;
   margin: 0 auto;
 }
 
@@ -10,7 +10,7 @@
 .toplinkarea {
   width: 100%;
   height: 68px;
-  background: #000;
+  background: #ffffff;
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
@@ -36,6 +36,8 @@
   height: 48px;
 }
 
+
+
 /* 메뉴 버튼 */
 .btn_menu::after {
   content: "";
@@ -44,6 +46,7 @@
   background-size: 463px 442px;
   background-position: -311px -166px;
   background-repeat: no-repeat;
+  background-color: #ffffff00;
   width: 32px;
   height: 32px;
   position: relative;
@@ -105,6 +108,7 @@
 .button-tooltip-wrapper {
   position: relative;
   display: inline-block;
+  background-color: #ffffff00;
 }
 
 .tooltip {
