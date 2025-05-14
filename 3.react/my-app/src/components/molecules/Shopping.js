@@ -18,7 +18,7 @@ function Shopping() {
                 <div className="shopping_header">
                     <div className="menu_tab">
                         <ul className="menu_tablist">
-                            <li className="menu_tabitem">
+                            <li className={`menu_tabitem ${activeTab === 'shopping' ? 'active' : ''}`}>
                                 <a href="/"
                                     className="menu_tablink"
                                     onClick={(e) => {
@@ -26,8 +26,9 @@ function Shopping() {
                                         handleTabClick('shopping');
                                     }}
                                 >쇼핑</a>
+                                <span className="separator">/</span>
                             </li>
-                            <li className="menu_tabitem">
+                            <li className={`menu_tabitem ${activeTab === 'mans' ? 'active' : ''}`}>
                                 <a href="/"
                                     className="menu_tablink"
                                     onClick={(e) => {
@@ -35,8 +36,9 @@ function Shopping() {
                                         handleTabClick('mans');
                                     }}
                                 >맨즈</a>
+                                <span className="separator">/</span>
                             </li>
-                            <li className="menu_tabitem">
+                            <li className={`menu_tabitem ${activeTab === 'onedeal' ? 'active' : ''}`}>
                                 <a href="/"
                                     className="menu_tablink"
                                     onClick={(e) => {
@@ -44,8 +46,9 @@ function Shopping() {
                                         handleTabClick('onedeal');
                                     }}
                                 >원쁠딜</a>
+                                <span className="separator">/</span>
                             </li>
-                            <li className="menu_tabitem">
+                            <li className={`menu_tabitem ${activeTab === 'shoppinglive' ? 'active' : ''}`}>
                                 <a href="/"
                                     className="menu_tablink"
                                     onClick={(e) => {
