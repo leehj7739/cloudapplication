@@ -13,7 +13,7 @@ function Bannerarea() {
                 <div className="notice_box">
                     <h3 className="title"><a target="_blank" href="https://www.naver.com/NOTICE" rel="noreferrer">공지사항</a></h3>
                 </div>
-                <a href="/more.html" target="_blank" className="link_all">서비스 전체보기 &gt; </a>
+                <a href="/more.html" target="_blank" className="link_all" rel="noreferrer">서비스 전체보기 &gt; </a>
             </div>
         </React.Fragment>
     )
