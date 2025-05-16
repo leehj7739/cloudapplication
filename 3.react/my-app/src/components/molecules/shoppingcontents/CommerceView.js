@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Divview = styled.div`
+const CView = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,7 +12,7 @@ const Divview = styled.div`
 `;
 
 // 세로열 div
-const Divmalllink = styled.div`
+const CMallLink = styled.div`
   width: 100%;
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@ const Divmalllink = styled.div`
     margin-bottom: 12px;
 `;
 
-const Divitemgroup = styled.div`
+const CItemGroup = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -34,7 +34,7 @@ const Divitemgroup = styled.div`
     padding: 5px;
 `;
 
-const Divmalllinkitem = styled.div`
+const CMallLinkItem = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,7 +60,7 @@ const DotSeparator = styled.span`
     
 `;
 
-const Divquickmenu = styled.div`
+const CQuickMenu = styled.div`
     width: 100%;
     background-color: #c0c0c0;
     border: 1px solid rgb(157, 157, 157);
@@ -69,7 +69,7 @@ const Divquickmenu = styled.div`
     margin-bottom: 12px;
 `;
 
-const Ulquickmenulist = styled.ul`
+const CQuickMenuList = styled.ul`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -80,11 +80,11 @@ const Ulquickmenulist = styled.ul`
    
 `;
 
-const MenuItem = styled.li`
+const CQuickMenuItem = styled.li`
     flex: 1;
 `;
 
-const Aquickmenulink = styled.a`
+const CQuickMenuLink = styled.a`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -98,7 +98,7 @@ const Aquickmenulink = styled.a`
     }
 `;
 
-const Divquickmenuthumbnail = styled.div`
+const CQuickMenuLinkThumb = styled.div`
     width: 32px;
     height: 32px;
     background-color: #ffffff;
@@ -119,10 +119,47 @@ const Divquickmenuthumbnail = styled.div`
     }
 `;
 
-const Divquickmenutext = styled.div`
+const CQuickMenuText = styled.div`
     padding-top: 5px;
 `;
 
+// 배너
+const CBanner = styled.div`
+    width: 100%;
+    background-color:rgb(255, 255, 255);
+    margin-bottom: 12px;
+`;
+
+const CBannerImg = styled.div`
+    width: 100%;
+    background-color:rgb(255, 255, 255);
+    border: 1px solid rgb(157, 157, 157);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+
+`;
+
+const StyledImage = styled.img`
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    transition: all 0.5s ease;    
+    &:hover {
+        transform: scale(1.1);
+    }
+`;
+
+
+const CBannerText = styled.div`
+    width: 100%;
+    font-size: 13px;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+`;
 
 
 
@@ -131,88 +168,93 @@ function CommerceView() {
     return (
         <React.Fragment>
             {/* 커머스 뷰 세로정렬 아이템 3개 */}
-            <Divview className="commerce_view">
+            <CView className="commerce_view">
                 {/* 쇼핑몰 링크 */}
-                <Divmalllink>
-                    <Divitemgroup>
-                        <Divmalllinkitem className="commerce_mall_link_item">
+                <CMallLink>
+                    <CItemGroup>
+                        <CMallLinkItem className="commerce_mall_link_item">
                             <a href="https://www.coupang.com/" class="mall_link" target="_blank" rel="noreferrer">쿠팡</a>
-                        </Divmalllinkitem>
+                        </CMallLinkItem>
                         <DotSeparator />
-                        <Divmalllinkitem className="commerce_mall_link_item">
+                        <CMallLinkItem className="commerce_mall_link_item">
                             <a href="https://www.gmarket.co.kr/" class="mall_link" target="_blank" rel="noreferrer">G마켓</a>
-                        </Divmalllinkitem>
+                        </CMallLinkItem>
                         <DotSeparator />
-                        <Divmalllinkitem className="commerce_mall_link_item">
+                        <CMallLinkItem className="commerce_mall_link_item">
                             <a href="https://www.auction.co.kr/" class="mall_link" target="_blank" rel="noreferrer">옥션</a>
-                        </Divmalllinkitem>
+                        </CMallLinkItem>
                         <DotSeparator />
-                        <Divmalllinkitem className="commerce_mall_link_item">
+                        <CMallLinkItem className="commerce_mall_link_item">
                             <a href="https://www.oliveyoung.co.kr/" class="mall_link" target="_blank" rel="noreferrer">올리브영영</a>
-                        </Divmalllinkitem>
-                    </Divitemgroup>
-                    <Divitemgroup>
-                        <Divmalllinkitem className="commerce_mall_link_item">
+                        </CMallLinkItem>
+                    </CItemGroup>
+                    <CItemGroup>
+                        <CMallLinkItem className="commerce_mall_link_item">
                             <a href="https://www.11st.co.kr/" class="mall_link" target="_blank" rel="noreferrer">11번가</a>
-                        </Divmalllinkitem>
+                        </CMallLinkItem>
                         <DotSeparator />
-                        <Divmalllinkitem className="commerce_mall_link_item">
+                        <CMallLinkItem className="commerce_mall_link_item">
                             <a href="https://www.ssg.com/" class="mall_link" target="_blank" rel="noreferrer">SSG닷컴</a>
-                        </Divmalllinkitem>
+                        </CMallLinkItem>
                         <DotSeparator />
-                        <Divmalllinkitem className="commerce_mall_link_item">
+                        <CMallLinkItem className="commerce_mall_link_item">
                             <a href="https://with.gsshop.com/" class="mall_link" target="_blank" rel="noreferrer">GS SHOP</a>
-                        </Divmalllinkitem>
-                    </Divitemgroup>
-                    <Divitemgroup>
-                        <Divmalllinkitem className="commerce_mall_link_item">
+                        </CMallLinkItem>
+                    </CItemGroup>
+                    <CItemGroup>
+                        <CMallLinkItem className="commerce_mall_link_item">
                             <a href="https://www.halfclub.com/" class="mall_link" target="_blank" rel="noreferrer">하프클럽</a>
-                        </Divmalllinkitem>
+                        </CMallLinkItem>
                         <DotSeparator />
-                        <Divmalllinkitem className="commerce_mall_link_item">
+                        <CMallLinkItem className="commerce_mall_link_item">
                             <a href="https://display.cjonstyle.com/" class="mall_link" target="_blank" rel="noreferrer">CJ온스타일</a>
-                        </Divmalllinkitem>
+                        </CMallLinkItem>
                         <DotSeparator />
-                        <Divmalllinkitem className="commerce_mall_link_item">
+                        <CMallLinkItem className="commerce_mall_link_item">
                             <a href="https://www.fashionplus.co.kr/" class="mall_link" target="_blank" rel="noreferrer">패션플러스</a>
-                        </Divmalllinkitem>
-                    </Divitemgroup>
-                </Divmalllink>
+                        </CMallLinkItem>
+                    </CItemGroup>
+                </CMallLink>
 
                 {/* 네이버 쇼핑 퀵메뉴 */}
-                <Divquickmenu className="commerce_quick_menu">
-                    <Ulquickmenulist className="commerce_quick_menu_list">
-                        <MenuItem className="commerce_quick_menu_item">
-                            <Aquickmenulink href="https://shopping.naver.com/my/home" className="commerce_quick_menu_link" target="_blank" rel="noreferrer">
-                                <Divquickmenuthumbnail className="commerce_quick_menu_thumbnail" iconPosition="-124px -34px"></Divquickmenuthumbnail>
-                                <Divquickmenutext className="commerce_quick_menu_text">마이쇼핑</Divquickmenutext>
-                            </Aquickmenulink>
-                        </MenuItem>
-                        <MenuItem className="commerce_quick_menu_item">
-                            <Aquickmenulink href="https://shopping.naver.com/my/writable-reviews" className="commerce_quick_menu_link" target="_blank" rel="noreferrer">
-                                <Divquickmenuthumbnail className="commerce_quick_menu_thumbnail" iconPosition="-68px -102px"></Divquickmenuthumbnail>
-                                <Divquickmenutext className="commerce_quick_menu_text">리뷰적립</Divquickmenutext>
-                            </Aquickmenulink>
-                        </MenuItem>
-                        <MenuItem className="commerce_quick_menu_item">
-                            <Aquickmenulink href="https://new-m.pay.naver.com/pcpay?serviceGroup=SHOPPING&amp;page=1" className="commerce_quick_menu_link" target="_blank" rel="noreferrer">
-                                <Divquickmenuthumbnail className="commerce_quick_menu_thumbnail" iconPosition="0 -102px"></Divquickmenuthumbnail>
-                                <Divquickmenutext className="commerce_quick_menu_text">주문</Divquickmenutext>
-                            </Aquickmenulink>
-                        </MenuItem>
-                        <MenuItem className="commerce_quick_menu_item">
-                            <Aquickmenulink href="https://shopping.naver.com/cart" className="commerce_quick_menu_link" target="_blank" rel="noreferrer">
-                                <Divquickmenuthumbnail className="commerce_quick_menu_thumbnail" iconPosition="-19px -174px" width="17px" height="16px"></Divquickmenuthumbnail>
-                                <Divquickmenutext className="commerce_quick_menu_text">장바구니</Divquickmenutext>
-                            </Aquickmenulink>
-                        </MenuItem>
-                    </Ulquickmenulist>
-                </Divquickmenu>
+                <CQuickMenu className="commerce_quick_menu">
+                    <CQuickMenuList className="commerce_quick_menu_list">
+                        <CQuickMenuItem className="commerce_quick_menu_item">
+                            <CQuickMenuLink href="https://shopping.naver.com/my/home" className="commerce_quick_menu_link" target="_blank" rel="noreferrer">
+                                <CQuickMenuLinkThumb className="commerce_quick_menu_thumbnail" iconPosition="-124px -34px"></CQuickMenuLinkThumb>
+                                <CQuickMenuText className="commerce_quick_menu_text">마이쇼핑</CQuickMenuText>
+                            </CQuickMenuLink>
+                        </CQuickMenuItem>
+                        <CQuickMenuItem className="commerce_quick_menu_item">
+                            <CQuickMenuLink href="https://shopping.naver.com/my/writable-reviews" className="commerce_quick_menu_link" target="_blank" rel="noreferrer">
+                                <CQuickMenuLinkThumb className="commerce_quick_menu_thumbnail" iconPosition="-68px -102px"></CQuickMenuLinkThumb>
+                                <CQuickMenuText className="commerce_quick_menu_text">리뷰적립</CQuickMenuText>
+                            </CQuickMenuLink>
+                        </CQuickMenuItem>
+                        <CQuickMenuItem className="commerce_quick_menu_item">
+                            <CQuickMenuLink href="https://new-m.pay.naver.com/pcpay?serviceGroup=SHOPPING&amp;page=1" className="commerce_quick_menu_link" target="_blank" rel="noreferrer">
+                                <CQuickMenuLinkThumb className="commerce_quick_menu_thumbnail" iconPosition="0 -102px"></CQuickMenuLinkThumb>
+                                <CQuickMenuText className="commerce_quick_menu_text">주문</CQuickMenuText>
+                            </CQuickMenuLink>
+                        </CQuickMenuItem>
+                        <CQuickMenuItem className="commerce_quick_menu_item">
+                            <CQuickMenuLink href="https://shopping.naver.com/cart" className="commerce_quick_menu_link" target="_blank" rel="noreferrer">
+                                <CQuickMenuLinkThumb className="commerce_quick_menu_thumbnail" iconPosition="-19px -174px" width="17px" height="16px"></CQuickMenuLinkThumb>
+                                <CQuickMenuText className="commerce_quick_menu_text">장바구니</CQuickMenuText>
+                            </CQuickMenuLink>
+                        </CQuickMenuItem>
+                    </CQuickMenuList>
+                </CQuickMenu>
 
                 {/* 배너 링크 */}
-                <div className="commerce_banner_link"></div>
+                <CBanner className="commerce_banner_link">
+                    <CBannerImg className="commerce_banner_img">
+                    <StyledImage src="https://s.pstatic.net/shopping.phinf/20250515_17/325a5f94-e25f-44aa-946f-1e77c2cb71e4.jpg" width="248" height="146" alt="제이에스티나 목걸이 10만원대" />
+                    </CBannerImg>
+                    <CBannerText className="commerce_banner_text">제이에스티나 목걸이 10만원대</CBannerText>
+                </CBanner>
 
-            </Divview>
+            </CView>
         </React.Fragment>
 
     );
