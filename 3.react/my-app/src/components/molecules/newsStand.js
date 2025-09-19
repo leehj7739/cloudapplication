@@ -51,7 +51,7 @@ const newsData = [
         date: '05월 12일 14:29'
     },
 
-    
+
 ];
 const sportsData = [
     {
@@ -300,82 +300,82 @@ const entertainmentData = [
 ];
 
 const categoryDataMap = {
-  all: [...newsData, ...sportsData, ...entertainmentData],
-  news: newsData,
-  sports: sportsData,
-  entertainment: entertainmentData
+    all: [...newsData, ...sportsData, ...entertainmentData],
+    news: newsData,
+    sports: sportsData,
+    entertainment: entertainmentData
 };
 
 function NewsStand() {
-  const [category, setCategory] = useState('all');
-  const [page, setPage] = useState(1);
-  const itemsPerPage = 8;
+    const [category, setCategory] = useState('all');
+    const [page, setPage] = useState(1);
+    const itemsPerPage = 8;
 
-  const data = categoryDataMap[category];
-  const totalPages = Math.ceil(data.length / itemsPerPage);
-  const pageData = data.slice((page - 1) * itemsPerPage, page * itemsPerPage);
+    const data = categoryDataMap[category];
+    const totalPages = Math.ceil(data.length / itemsPerPage);
+    const pageData = data.slice((page - 1) * itemsPerPage, page * itemsPerPage);
 
-  return (
-    <div className="newsstand">
-      {/* 카테고리 */}
-      <ul className="category-list">
-        {Object.keys(categoryDataMap).map(cat => (
-          <li
-            key={cat}
-            className={`category-item${category === cat ? ' active' : ''}`}
-            onClick={() => { setCategory(cat); setPage(1); }}
-          >
-            {cat === 'all' ? '전체' : cat === 'news' ? '뉴스' : cat === 'sports' ? '스포츠' : '연예'}
-          </li>
-        ))}
-      </ul>
+    return (
+        <div className="newsstand">
+            {/* 카테고리 */}
+            <ul className="category-list">
+                {Object.keys(categoryDataMap).map(cat => (
+                    <li
+                        key={cat}
+                        className={`category-item${category === cat ? ' active' : ''}`}
+                        onClick={() => { setCategory(cat); setPage(1); }}
+                    >
+                        {cat === 'all' ? '전체' : cat === 'news' ? '뉴스' : cat === 'sports' ? '스포츠' : '연예'}
+                    </li>
+                ))}
+            </ul>
 
-      {/* 그리드 */}
-      <div className="grid-container">
-        {pageData.map((item, idx) => (
-          <div className="grid-item" key={idx}>
-            <div className="news-thumb">
-              <img src={item.img} alt={item.press} />
+            {/* 그리드 */}
+            <div className="grid-container">
+                {pageData.map((item, idx) => (
+                    <div className="grid-item" key={idx}>
+                        <div className="news-thumb">
+                            <img src={item.img} alt={item.press} />
+                        </div>
+                        <div className="news-info">
+                            <span className="news-press">{item.press}</span>
+                            <p className="news-title">{item.title}</p>
+                            <span className="news-date">{item.date}</span>
+                        </div>
+                    </div>
+                ))}
             </div>
-            <div className="news-info">
-              <span className="news-press">{item.press}</span>
-              <p className="news-title">{item.title}</p>
-              <span className="news-date">{item.date}</span>
-            </div>
-          </div>
-        ))}
-      </div>
 
-      {/* 페이지네이션 */}
-      <div className="contentPaging">
-        <button
-          className="paging-btn prev"
-          disabled={page === 1}
-          onClick={() => setPage(page - 1)}
-        >
-          이전
-        </button>
-        <div className="page-numbers">
-          {Array.from({ length: totalPages }, (_, i) => (
-            <button
-              key={i + 1}
-              className={`page-number${page === i + 1 ? ' active' : ''}`}
-              onClick={() => setPage(i + 1)}
-            >
-              {i + 1}
-            </button>
-          ))}
+            {/* 페이지네이션 */}
+            <div className="contentPaging">
+                <button
+                    className="paging-btn prev"
+                    disabled={page === 1}
+                    onClick={() => setPage(page - 1)}
+                >
+                    이전
+                </button>
+                <div className="page-numbers">
+                    {Array.from({ length: totalPages }, (_, i) => (
+                        <button
+                            key={i + 1}
+                            className={`page-number${page === i + 1 ? ' active' : ''}`}
+                            onClick={() => setPage(i + 1)}
+                        >
+                            {i + 1}
+                        </button>
+                    ))}
+                </div>
+                <button
+                    className="paging-btn next"
+                    disabled={page === totalPages}
+                    onClick={() => setPage(page + 1)}
+                >
+                    다음
+                </button>
+            </div>
         </div>
-        <button
-          className="paging-btn next"
-          disabled={page === totalPages}
-          onClick={() => setPage(page + 1)}
-        >
-          다음
-        </button>
-      </div>
-    </div>
-  );
+    );
 }
 
 export default NewsStand;
